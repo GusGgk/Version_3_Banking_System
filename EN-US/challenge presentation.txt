@@ -1,0 +1,49 @@
+Modeling the Banking System in OOP with Python
+
+main goal
+start modeling the banking system in OOP.
+add classes for customer and banking operations: deposit and withdrawal.
+
+CHALLENGE
+update the implementation of the banking system, to store customer and bank account data in objects instead of dictionaries.
+The code must follow the following UML class model:
+
+historic
++ add_transaction(transaction: Transaction)
+
+deposit // withdrawal
+-value: float // -value: float
+
+<<interface>>
+Transaction
++ register(account: Account)
+
+Account
+- balance: float
+- number: int
+- agency: str
+- client: Client
+- historical : Historical
++ balance() : float
++ new_account(client: Client, number: int) : Account
++ withdraw(value: float) : bool
++ deposit(value: float) : bool
+
+Client
+- address: str
+- accounts: list
++ perform_transaction(account: Account,transaction: Transaction)
++add_account(account: Account)
+
+Current Account
+- limit: float
+- withdrawal_limit: int
+
+Physical person
+- cpf : str
+- name: str
+- birth_date: date
+
+
+EXTRA CHALLENGE
+After completing the modeling of the classes and the creation of the methods. update the methods that handle menu options, to work with the modeled classes

@@ -1,0 +1,50 @@
+Modelando o Sistema Bancário em POO com Python
+
+objetivo geral
+iniciar a modelagem do sistema bancário em POO. 
+adicionar classes para cliente e as operações bancárias: deposito e saque.
+
+DESAFIO
+atualizar a implemententação do sistema bancário, para armazenar os dados de clientes e contas bancárias em objetos ao inves de dicionarios.
+O codigo deve seguir o modelo de classes UML a seguir:
+
+historico
++ adicionar_transacao(transacao : Transacao)
+
+deposito       // saque
+-valor : float // -valor : float
+
+<<interface>>
+Transacao
++ registrar(conta : Conta)
+
+Conta
+- saldo : float
+- numero : int
+- agencia : str
+- cliente : Cliente 
+- historico : Historico 
++ saldo() : float
++ nova_conta(cliente : Cliente, numero : int) : Conta
++ sacar(valor : float) : bool 
++ depositar(valor : float) : bool
+
+Cliente
+- endereco : str
+- contas : list
++ realizar_transacao(conta : Conta,transacao : Transacao)
++adicionar_conta(conta : Conta)
+
+ContaCorrente
+- limite : float
+- limite_saques : int
+
+PessoaFisica
+- cpf : str
+- nome : str
+- data_nascimento : date
+
+
+DESAFIO EXTRA
+Apos concluir a modelagem das classes e a criação dos métodos. atualizar os metodos que tratam as opções do menu,  para funcionarem com as classes modeladas
+
